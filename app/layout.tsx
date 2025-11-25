@@ -3,9 +3,9 @@ import type { Metadata } from "next"
 import "../styles/globals.css"
 
 export const metadata: Metadata = {
-  title: "Formalizador de Textos - IA",
+  title: "Simplificador de Textos - IA",
   description:
-    "Convierte tus textos informales en comunicaciones profesionales y formales usando inteligencia artificial",
+    "Convierte textos legales y jurídicos en texto más simple y sin palabras específicas",
 }
 
 export default function RootLayout({

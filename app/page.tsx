@@ -127,7 +127,7 @@ export default function TextFormalizerPage() {
           <ul className="space-y-3 text-slate-700 dark:text-slate-300">
             <li className="flex gap-3">
               <span className="text-blue-600 dark:text-blue-400 font-bold">1.</span>
-              <span>Pega un texto legal o documento complicado en el recuadro izquierdo</span>
+              <span>Pega un texto legal o jurídico en el recuadro izquierdo</span>
             </li>
             <li className="flex gap-3">
               <span className="text-blue-600 dark:text-blue-400 font-bold">2.</span>
