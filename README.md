@@ -23,11 +23,7 @@ source venv/bin/activate
 ```bash
 pip install -r requirements
 ```
-### 5. Install the requirements
-```bash
-pip install -r requirements
-```
-### 6. Run the uvicorn app
+### 5. Run the uvicorn app
 ```bash
 uvicorn app:app --reload
 ```
@@ -45,7 +41,6 @@ cd Frontend
 ```bash
 npm install
 ```
-
 ### 3. Run the frontend
 ```bash
 npm run dev
