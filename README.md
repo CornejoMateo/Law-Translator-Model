@@ -13,7 +13,7 @@ cd Backend
 ```
 ### 2. Create a virtual environment
 ```bash
-python3 -n venv env
+python3 -m venv env
 ```
 ### 3. Activate the venv
 ```bash
