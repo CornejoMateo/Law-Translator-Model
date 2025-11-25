@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Spinner } from "@/components/ui/spinner"
 
 export default function TextFormalizerPage() {
-  const [inputText, setInputText] = useState("") 
+  const [inputText, setInputText] = useState("")
   const [outputText, setOutputText] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
@@ -24,10 +24,24 @@ export default function TextFormalizerPage() {
     setOutputText(inputText) // simulate output for now
 
     try {
-      // const response = ... backend
-      //const data = await response.json()
-      // setOutputText(data.formalizedText)
+      const response = await fetch("http://127.0.0.1:8000/infer_text", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text: inputText }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al simplificar el texto")
+      }
+
+      const data = await response.json()
+
+      // Set the output text from the response
+      setOutputText(data.simplified_text)
     } catch (err) {
+      setError("Ocurrió un error inesperado al conectar con el servidor.")
     } finally {
       setIsLoading(false)
     }
